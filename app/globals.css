@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #0a0e1a;
+  color: #e2e8f0;
+  font-family: var(--font-mono);
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0e1a; }
+::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00d4ff44; }
+
+/* Grid noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scanline effect */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glowing text accent */
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.glow-text-orange {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
+}
+
+/* Card border glow on hover */
+.card-hover {
+  transition: all 0.25s ease;
+}
+.card-hover:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+/* Challenge card hover */
+.challenge-hover {
+  transition: all 0.25s ease;
+}
+.challenge-hover:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.1);
+}
+
+/* Question text formatting */
+.question-text em {
+  color: #00d4ff;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Timer warning pulse */
+@keyframes timerWarning {
+  0%, 100% { color: #ef4444; }
+  50% { color: #fca5a5; text-shadow: 0 0 12px rgba(239, 68, 68, 0.8); }
+}
+.timer-warning {
+  animation: timerWarning 1s ease-in-out infinite;
+}
+
+/* Divider line */
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1e2d45, transparent);
+}
+
+/* Active nav indicator */
+.nav-active-line {
+  position: relative;
+}
+.nav-active-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #00d4ff, #7c3aed);
+  border-radius: 1px;
+}

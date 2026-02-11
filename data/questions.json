@@ -1,0 +1,318 @@
+{
+  "practice": [
+    {
+      "id": "project1",
+      "name": "Games Sales",
+      "file": "./projects/Games_Sales.xlsx",
+      "questions": [
+        {
+          "id": "p1q1",
+          "variants": [
+            "In the *Videojuegos* sheet, keep only the last entry for each Video Game and remove all other duplicate rows based on Gender.",
+            "In the *Videojuegos* sheet, remove all duplicate rows for each Video Game, keep only the most oldest entry according to Gender."
+          ]
+        },
+        {
+          "id": "p1q2",
+          "variants": [
+            "In the *Profesiones* sheet, in the *Employee ID* column, apply a custom number format to automatically display each ID with the \"#\" symbol followed by five digits. The existing number must be padded with zeros on the left side. For example, '123' will be displayed as '#00123'",
+            "Apply a custom number format in the *Profesiones* sheet for the *Employee ID* column that shows the \"$\" symbol plus six digits, padding numbers with leading zeros. Example: '123' becomes '$000123'",
+            "In the *Profesiones* sheet, format the *Employee ID* column with a custom format displaying \"#\" followed by a four number with left-side zero padding (e.g., '123' displays as '#0123')."
+          ]
+        },
+        {
+          "id": "p1q3",
+          "variants": [
+            "Require users to use the password 123456 and prevent users from adding, deleting, moving, and hiding sheets in the current workbook by protecting its structure.",
+            "Protect the workbook structure with password KZRE44 to prevent users from adding, deleting, moving, or hiding sheets.",
+            "Apply structure protection to the workbook using password JHSAHJVASHJV33, restricting users from modifying, removing, relocating, or concealing sheets."
+          ]
+        },
+        {
+          "id": "p1q4",
+          "variants": [
+            "In the \"Ganancias\" sheet, use Goal Seek to determine the change in cell E6 that would result in a Quantity Sold of $96 in cell G6.",
+            "Apply Goal Seek in the \"Ganancias\" sheet to calculate what value cell E6 needs to achieve a Quantity Sold of $500 in cell G6.",
+            "In the \"Ganancias\" sheet, utilize Goal Seek to find the required value for cell E8 to reach a target Quantity Sold of $96 in cell G8."
+          ]
+        },
+        {
+          "id": "p1q5",
+          "variants": [
+            "In the Ganancias sheet, write a formula in cell J13 that returns the \"highest\" Quantity Sold based on the Platform and Genre shown in cells J10 and J11.",
+            "Create a formula in cell J13 of the Ganancias sheet that calculates \"Lowest\" Quantity Sold for the Platform and Genre specified in cells J10 and J11."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project2",
+      "name": "Pivot Table",
+      "file": "./projects/PivoteTable.xlsx",
+      "questions": [
+        {
+          "id": "p2q1",
+          "variants": [
+            "In the Analisis de videojuegos sheet, modify the pivot table to group the data in 5-day intervals, accepting the default start and end dates.",
+            "Adjust the pivot table in the Analisis de videojuegos sheet to organize data into 8-day groupings using the default starting and ending dates.",
+            "In the Analisis de videojuegos sheet, configure the pivot table grouping by 10-day periods with automatic start and end date settings."
+          ]
+        },
+        {
+          "id": "p2q2",
+          "variants": [
+            "In the Resumen sheet, configure the Pivot Table to display a blank line below the last Genre in each Platform section."
+          ]
+        },
+        {
+          "id": "p2q3",
+          "variants": [
+            "Configure Microsoft Excel to automatically save a recovered version of each open file every 16 minutes.",
+            "Set Excel to create AutoRecover backups of all open files at 10-minute intervals.",
+            "Adjust Excel settings to automatically save recovery versions of open workbooks every 25 minutes."
+          ]
+        },
+        {
+          "id": "p2q4",
+          "variants": [
+            "In the \"Aventuras\" sheet, in cells C8:G8, use Fill Series to project a Geometric trend of 12 percent for each year in the London office.",
+            "Apply Fill Series in cells C8:G8 of the \"Aventuras\" sheet to generate a Geometric progression with a 18 percent growth rate for the London office yearly data.",
+            "In the \"Aventuras\" sheet, utilize the Fill Series feature in the range C8:G8 to create a Geometric sequence showing 63 percent annual increase for London office."
+          ]
+        },
+        {
+          "id": "p2q5",
+          "variants": [
+            "All cells in the \"Localidades\" sheet are unlocked. Lock only cells F4:F10. Ensure that users can select and format cells after protecting the sheet. Protect the sheet with the password 4567.",
+            "In the \"Localidades\" sheet, lock exclusively the range F4:F10 while allowing cell selection and formatting. Apply sheet protection using password dfnijsdhb.",
+            "Lock cells F4:F10 in the \"Localidades\" sheet (all other cells remain unlocked), permit users to select and format cells, and protect the sheet with password HELLOWORLD."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project3",
+      "name": "Formatting",
+      "file": "./projects/Formating.xlsx",
+      "questions": [
+        {
+          "id": "p3q1",
+          "variants": [
+            "In the Ciberjuegos sheet, in the Total Sales column, design a conditional formatting rule that uses the Icon Sets style to display a pink circle when the value is greater than or equal to \"7\", a yellow circle when the value is less than \"7\" and greater than or equal to \"4\", and a gray circle when it is less than \"4\".",
+            "Create a conditional formatting rule in the Total Sales column of the Ciberjuegos sheet using Icon Sets: pink circle for values ≥ 8, red circle for values between 5 and 7.99, and gray circle for values < 5.",
+            "In the Ciberjuegos sheet, apply Icon Sets conditional formatting to the Total Sales column showing red circles (≥ 7), gray circles (4 to < 7), and pink circles (< 4)."
+          ]
+        },
+        {
+          "id": "p3q2",
+          "variants": [
+            "The Bicycle company will give gift cards for $100, $200, $300 to customers who have shown loyalty during the first quarter of the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions."
+          ]
+        },
+        {
+          "id": "p3q3",
+          "variants": [
+            "In the Pivote sheet, add two row fields to the pivot table: \"Editorial\" and \"Genero\", and in the values section, the sum and average of \"Ventas USA\".",
+            "Configure the pivot table in the Pivote sheet by adding \"Editorial\" and \"Plataforma\" as row fields, and including both the sum and average of \"Ventas EU\" in the values area."
+          ]
+        },
+        {
+          "id": "p3q4",
+          "variants": [
+            "Use a Slicer to filter the pivot table by the Plataforma field, showing the 3DS records. The size and location of the slicer are not relevant.",
+            "Insert a Slicer for the Plataforma field to filter the pivot table and display only SAT data. Positioning and dimensions are not important.",
+            "Add a Slicer to filter the pivot table by Plataforma, selecting GBA records. The slicer's size and placement are not critical."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project4",
+      "name": "Charts & Formulas",
+      "file": "./projects/Proyecto_Excel_Charts_And_Formulas.xlsx",
+      "questions": [
+        {
+          "id": "p4q1",
+          "variants": [
+            "In the Regiones worksheet, create a Histogram chart that displays the values from the Sales column. Ensure that the bin widths are not modified, and configure the chart to display an overflow bin for values greater than 25,000. Apply number formatting to the bin range so that values display with 0 decimal places, while keeping all other settings at their default. The size and location of the chart are not relevant."
+          ]
+        },
+        {
+          "id": "p4q2",
+          "variants": [
+            "In the Bicicletas worksheet, in cell G3, review the formula to display the total quantity of items that have an expiration date earlier than the current date. Do not include the current date."
+          ]
+        },
+        {
+          "id": "p4q3",
+          "variants": [
+            "In the Zonas worksheet, create a chart that displays \"Production Units\" by location as a clustered column chart and \"Maximum Units\" by location as a line chart with markers on the same chart. Display the location cities as the horizontal axis labels. The size and position of the chart are not relevant."
+          ]
+        },
+        {
+          "id": "p4q4",
+          "variants": [
+            "In the Resultados worksheet, in the Best Result column, modify the conditional formatting rule applied to the top 3 scores. Change the font style to bold and apply the color Green, Accent 6, Darker 25% from the theme color palette. There is no need to create new rules or delete existing ones."
+          ]
+        },
+        {
+          "id": "p4q5",
+          "variants": [
+            "In the Tratamientos worksheet, in cell H3, enter a formula that returns the total amount charged for records marked as \"YES\" in the Discount column."
+          ]
+        },
+        {
+          "id": "p4q6",
+          "variants": [
+            "In the Exportación worksheet, in cell D5, enter a formula that displays the data from cells A5:B25 sorted by Price in descending order."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project5",
+      "name": "Advanced Features",
+      "file": "./projects/Advanced_Excel_Features.xlsx",
+      "questions": [
+        {
+          "id": "p5q1",
+          "variants": [
+            "In the Analisis worksheet, configure the PivotChart to display the Axis Field Buttons and the Value Field Buttons."
+          ]
+        },
+        {
+          "id": "p5q2",
+          "variants": [
+            "In the Notas worksheet, use an Excel feature to group all rows in the table that have the value \"A\" in the Section column. Note: Do not create any other groups in the worksheet."
+          ]
+        },
+        {
+          "id": "p5q3",
+          "variants": [
+            "In the Notas 2 worksheet, in the Resultados table, create a conditional formatting rule. Use a formula to format the Name column with red text (standard colors) if the average of the four exam scores is greater than 70."
+          ]
+        },
+        {
+          "id": "p5q4",
+          "variants": [
+            "Use an Excel function to ungroup the data in the table."
+          ]
+        },
+        {
+          "id": "p5q5",
+          "variants": [
+            "In the Unit Cost column, create a conditional formatting rule that displays a red check mark when a Unit Cost value exists. No cell icon should be displayed when there is no Unit Cost value."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project6",
+      "name": "Macros",
+      "file": "./projects/Macros.xlsm",
+      "questions": [
+        {
+          "id": "p6q1",
+          "variants": [
+            "On the RH worksheet, modify the FormatoTabla macro so that it applies the style \"TableStyleLight14\"."
+          ]
+        },
+        {
+          "id": "p6q2",
+          "variants": [
+            "On the RH2 worksheet, update the PrintTitleRows and PrintGridlines properties so that the printer macro automatically prints rows 1:3 as title rows without printing gridlines. Macros are disabled for security reasons, but you can use the Visual Basic Editor."
+          ]
+        },
+        {
+          "id": "p6q3",
+          "variants": [
+            "Configure Excel so that all macros in the workbook are disabled without displaying any notification."
+          ]
+        },
+        {
+          "id": "p6q4",
+          "variants": [
+            "Configure Excel so that you can edit content using the French (France) language. Do not set this language as the default and do not restart Office if prompted; simply close the dialog box."
+          ]
+        }
+      ]
+    }
+  ],
+  "challenges": [
+    {
+      "id": "challenge1",
+      "name": "Challenge 1 — Analytical Computing",
+      "file": "./projects/CERTIFICACION MO-211/Analytical Computing.xlsx",
+      "questions": [
+        {
+          "id": "c1q1",
+          "variants": [
+            "You are modifying a class gradebook. On the \"Assignments\" worksheet, in the \"Total\" column, create a conditional formatting rule. Use a formula to format the text with Orange, Accent 2, Darker 25% font color, Bold Italic font style, and Single underline. Finally, in the fill section, add \"Blue, Accent 1\" Pattern Color and 6.25% Gray Pattern Style if the \"Total\" score is greater than the \"Passing Score\" in cell B29."
+          ]
+        },
+        {
+          "id": "c1q2",
+          "variants": [
+            "On the \"Grades\" worksheet, in the \"Grade\" column, enter a formula that displays a \"Letter Grade\" for each student. Use the \"Grade Conversion\" table to determine the letter grade based on the \"Total\" column in the \"Grades\" table. (USE VLOOKUP OR XLOOKUP)"
+          ]
+        },
+        {
+          "id": "c1q3",
+          "variants": [
+            "On the \"Grades\" worksheet, in the \"Grade\" column, enter a formula that displays a \"Letter Grade\" for each student. Use the \"Grade Conversion\" table to determine the letter grade based on the \"Total\" column in the \"Grades\" table. (YOU CAN'T USE THE SAME METHOD)"
+          ]
+        },
+        {
+          "id": "c1q4",
+          "variants": [
+            "On the \"Weighting\" worksheet, create a scenario named \"More Exams\" that changes the value in cell B4 to \"15\". Allow changes to be made to the scenario. Then close the Scenario Manager."
+          ]
+        },
+        {
+          "id": "c1q5",
+          "variants": [
+            "On the \"Enrollment Analysis\" worksheet, rename the value field as \"Percentage\". Show values as % of Row Total to four decimal place."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "challenge2",
+      "name": "Challenge 2 — First Up Consultants",
+      "file": "./projects/CERTIFICACION MO-211/First_Up_Consultants.xlsx",
+      "questions": [
+        {
+          "id": "c2q1",
+          "variants": [
+            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that subtracts the \"Project Cost\" from the \"Amount Payable\". Display the calculated field for each client."
+          ]
+        },
+        {
+          "id": "c2q2",
+          "variants": [
+            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total\" that divides the \"Project Cost\" from the \"Amount Payable\". Display the calculated field for each client."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "challenge3",
+      "name": "Challenge 3 — Cruise Bookings",
+      "file": "./projects/CERTIFICACION MO-211/Cruise Bookings.xlsm",
+      "questions": [
+        {
+          "id": "c3q1",
+          "variants": [
+            "Within the 'Reservations' worksheet, apply an icon set–based conditional formatting rule to the 'Excursions' column such that the Red Flag icon is rendered only in instances where a fee has been levied, while explicitly suppressing the display of any icon for entries that are not subject to a fee."
+          ]
+        },
+        {
+          "id": "c3q2",
+          "variants": [
+            "Within the 'Payment Due' worksheet, starting at cell D4, generate a PivotTable sourced from the data on the 'Reservations' worksheet. Configure the PivotTable to enumerate each distinct 'Code' as a row label. For every 'Code', summarize the 'Balance', 'Deposit', and 'Total' fields, and additionally include a calculated value that multiplies the 'Guests' field by the 'Cabin' field."
+          ]
+        }
+      ]
+    }
+  ]
+}
