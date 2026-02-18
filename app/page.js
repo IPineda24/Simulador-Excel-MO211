@@ -121,8 +121,6 @@ export default function HomePage() {
         </button>
 
         {/* Exam Mode */ }
-        {/*
-        
         <button
           onClick={ () => handleNavigation('exam') }
           className="group bg-sim-card border border-sim-border rounded-2xl p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:border-[#e05c00]/40 hover:shadow-[0_0_24px_rgba(224,92,0,0.08)]"
@@ -152,7 +150,6 @@ export default function HomePage() {
             <span>→</span>
           </div>
         </button>
-        */}
 
       </div>
 
