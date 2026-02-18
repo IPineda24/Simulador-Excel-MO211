@@ -398,7 +398,7 @@
         {
           "id": "e3q1",
           "variants": [
-            "On the \"Orders\" worksheet, in the \"Discount\" column, modify the conditional formatting rule applied to the largest discounts. Change the font style to Bold and the font color to Green, Accent 6, Darker 25% (from the Theme Colors palette.) Note: Do not create any new conditional formatting rules or remove any existing rules."
+            "On the \"Orders\" worksheet, in the \"Discount\" column, modify the conditional formatting rule applied to the largest discounts. Change the font style to Bold and the font color to Olive Green,  Accent 3, Darker 25% (from the Theme Colors palette.) Note: Do not create any new conditional formatting rules or remove any existing rules."
           ]
         },
         {
