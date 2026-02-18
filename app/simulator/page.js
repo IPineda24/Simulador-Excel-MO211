@@ -28,8 +28,6 @@ function formatTime(seconds) {
 
 // Trigger browser download for a file in /public/projects/
 function downloadFile(filePath) {
-  // filePath comes from JSON like "./projects/Games_Sales.xlsx"
-  // In Next.js, public/ files are served from root
   const href = filePath.replace(/^\.\//, '/')
   const link = document.createElement('a')
   link.href = href
@@ -65,19 +63,25 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
   const completedCount = Object.values(questionStates).filter(v => v === 'completed').length
   const reviewCount = Object.values(questionStates).filter(v => v === 'review').length
   const isChallenge = mode === 'challenges'
+  const isExam = mode === 'exam'
+
+  const modeLabel = isExam ? 'Exam' : isChallenge ? 'Challenges' : 'Practice'
+  const modeColor = isExam ? 'text-[#e05c00]' : isChallenge ? 'text-challenge-accent' : 'text-sim-accent'
+  const btnStyle = isExam
+    ? 'bg-[#e05c00]/10 border-[#e05c00]/30 text-[#e05c00] hover:bg-[#e05c00]/20'
+    : isChallenge
+      ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
+      : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
 
   const handleHome = () => {
-    // Si es una ventana popup (tiene opener), cerrarla
     if (window.opener && window.opener !== window) {
       window.close()
     } else {
-      // Si no es popup, usar la función onHome normal
       onHome()
     }
   }
 
   return (
-    // Keep the dark background from the theme for summary
     <div className="min-h-screen flex items-center justify-center px-6 relative z-10">
       <div className="max-w-lg w-full text-center animate-fade-in">
         <div className="text-6xl mb-6">🎯</div>
@@ -86,9 +90,7 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
         </h1>
         <p className="text-sim-muted text-sm mb-10">
           Modo:{ ' ' }
-          <span className={ `font-bold ${isChallenge ? 'text-challenge-accent' : 'text-sim-accent'}` }>
-            { isChallenge ? 'Challenges' : 'Practice' }
-          </span>
+          <span className={ `font-bold ${modeColor}` }>{ modeLabel }</span>
         </p>
 
         <div className="grid grid-cols-3 gap-4 mb-10">
@@ -113,10 +115,7 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
           </button>
           <button
             onClick={ onRestart }
-            className={ `px-6 py-2.5 rounded-xl border text-sm font-bold transition-all ${isChallenge
-              ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
-              : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
-              }` }
+            className={ `px-6 py-2.5 rounded-xl border text-sm font-bold transition-all ${btnStyle}` }
           >
             Repetir sesión
           </button>
@@ -131,7 +130,8 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
 function SimulatorContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const mode = searchParams.get('mode') === 'challenges' ? 'challenges' : 'practice'
+  const rawMode = searchParams.get('mode')
+  const mode = rawMode === 'challenges' ? 'challenges' : rawMode === 'exam' ? 'exam' : 'practice'
 
   const [session] = useState(() => buildSession(mode))
   const [projectIdx, setProjectIdx] = useState(0)
@@ -146,6 +146,10 @@ function SimulatorContent() {
   const currentQuestion = currentProject.resolvedQuestions[questionIdx]
   const stateKey = `${currentProject.id}-${questionIdx}`
   const isChallenge = mode === 'challenges'
+  const isExam = mode === 'exam'
+
+  // Accent color based on mode
+  const accentColor = isExam ? '#e05c00' : isChallenge ? 'var(--challenge-accent)' : 'var(--sim-accent)'
 
   // ── Timer ──
   useEffect(() => {
@@ -163,12 +167,11 @@ function SimulatorContent() {
     })
   }, [stateKey])
 
-  // ── Submit project: download Excel + advance ──
+  // ── Submit project: advance + download the NEXT project's file ──
   const handleSubmit = () => {
-    // Download the Excel file for the CURRENT project before advancing
-    downloadFile(currentProject.file)
-
     if (projectIdx < totalProjects - 1) {
+      const nextProject = session[projectIdx + 1]
+      downloadFile(nextProject.file)
       setProjectIdx(i => i + 1)
       setQuestionIdx(0)
     } else {
@@ -191,7 +194,6 @@ function SimulatorContent() {
   const qState = questionStates[stateKey]
 
   return (
-    // 100dvh = exactly the window height, no overflow, no scroll
     <div
       className="flex flex-col bg-[#f0f2f5] overflow-hidden"
       style={ { height: '100dvh', fontFamily: 'Arial, sans-serif' } }
@@ -225,10 +227,17 @@ function SimulatorContent() {
           </button>
         </div>
 
-        {/* Center: Project title */ }
-        <h1 className="font-bold text-white tracking-wide truncate mx-2" style={ { fontSize: '12px' } }>
-          Project { projectIdx + 1 } of { totalProjects }: { currentProject.name }
-        </h1>
+        {/* Center: mode badge + Project title */ }
+        <div className="flex items-center gap-2 mx-2 overflow-hidden">
+          { isExam && (
+            <span className="shrink-0 text-[9px] font-bold font-mono uppercase tracking-widest bg-[#e05c00]/20 border border-[#e05c00]/50 text-[#f08040] rounded px-1.5 py-0.5">
+              EXAM
+            </span>
+          ) }
+          <h1 className="font-bold text-white tracking-wide truncate" style={ { fontSize: '12px' } }>
+            Project { projectIdx + 1 } of { totalProjects }: { currentProject.name }
+          </h1>
+        </div>
 
         {/* Right: Restart + Submit + Download */ }
         <div className="flex items-center gap-1.5 shrink-0">
@@ -324,7 +333,6 @@ function SimulatorContent() {
           className="h-full animate-fade-in"
           style={ { padding: '8px 14px' } }
         >
-          {/* State badge — compact, inline */ }
           { qState && (
             <span className={ `inline-flex items-center gap-1 font-bold rounded mr-2 mb-1 ${qState === 'completed'
               ? 'text-green-700'

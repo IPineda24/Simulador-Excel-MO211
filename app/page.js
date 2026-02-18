@@ -56,7 +56,7 @@ export default function HomePage() {
       </div>
 
       {/* Mode Cards */ }
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl animate-slide-up">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl animate-slide-up">
 
         {/* Practice Mode */ }
         <button
@@ -119,6 +119,38 @@ export default function HomePage() {
             <span>→</span>
           </div>
         </button>
+
+        {/* Exam Mode */ }
+        <button
+          onClick={ () => handleNavigation('exam') }
+          className="group bg-sim-card border border-sim-border rounded-2xl p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:border-[#e05c00]/40 hover:shadow-[0_0_24px_rgba(224,92,0,0.08)]"
+        >
+          <div className="flex items-start justify-between mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#e05c00]/10 border border-[#e05c00]/20 flex items-center justify-center">
+              <span className="text-2xl">📝</span>
+            </div>
+            <span className="text-[#e05c00]/60 text-xs font-mono uppercase tracking-widest pt-1">3 Projects</span>
+          </div>
+          <h2 className="font-display text-2xl font-bold text-sim-text mb-2"
+            style={ { fontFamily: 'Syne, sans-serif' } }>
+            Exam
+          </h2>
+          <p className="text-sim-muted text-sm leading-relaxed mb-6">
+            Simulación completa del examen MO-211. Condiciones reales de certificación Certiport.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            { ['Adventure Works', 'First Up', 'Wide World'].map(tag => (
+              <span key={ tag } className="text-xs bg-[#e05c00]/5 border border-[#e05c00]/15 text-[#e05c00]/70 rounded-full px-3 py-0.5">
+                { tag }
+              </span>
+            )) }
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-[#e05c00] text-sm font-mono group-hover:gap-3 transition-all">
+            <span>Comenzar</span>
+            <span>→</span>
+          </div>
+        </button>
+
       </div>
 
       {/* Footer */ }
