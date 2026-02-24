@@ -324,19 +324,19 @@
         {
           "id": "e1q1",
           "variants": [
-            "On the ‘Inventory’ worksheet, implement an icon set–based conditional formatting rule in the ‘Cost’ column such that a Red Down Triangle icon is displayed for values exceeding 30, a Red Cross icon is shown for values less than or equal to 30 but greater than or equal to 20, and a Green Up Arrow icon is rendered for values falling below 20."
+            "On the 'Inventory' worksheet, implement an icon set–based conditional formatting rule in the 'Cost' column such that a Red Down Triangle icon is displayed for values exceeding 30, a Red Cross icon is shown for values less than or equal to 30 but greater than or equal to 20, and a Green Up Arrow icon is rendered for values falling below 20."
           ]
         },
         {
           "id": "e1q2",
           "variants": [
-            "On the Inventory worksheet in cell K9 Determine the total of ‘List Price’ for all records in which the ‘Stock’ quantity is greater than 100 and the corresponding ‘Color’ field is equal to Black."
+            "On the Inventory worksheet in cell K9 Determine the total of 'List Price' for all records in which the 'Stock' quantity is greater than 100 and the corresponding 'Color' field is equal to Black."
           ]
         },
         {
           "id": "e1q3",
           "variants": [
-            "On the Locations worksheet, apply Goal Seek to adjust the value in the ‘Units in Production’ cell for Shanghai until the corresponding ‘Remaining Capacity’ is equal to 0."
+            "On the Locations worksheet, apply Goal Seek to adjust the value in the 'Units in Production' cell for Shanghai until the corresponding 'Remaining Capacity' is equal to 0."
           ]
         },
         {
@@ -379,13 +379,13 @@
         {
           "id": "e2q4",
           "variants": [
-            "On the ‘Consultants Analysis’ worksheet, beginning in cell A3, create a PivotTable using the data from the ‘ConsultantsTable’ table. Add the ‘Name’ field to the Rows area and the ‘Hourly Pay’ field to the Values area."
+            "On the 'Consultants Analysis' worksheet, beginning in cell A3, create a PivotTable using the data from the 'ConsultantsTable' table. Add the 'Name' field to the Rows area and the 'Hourly Pay' field to the Values area."
           ]
         },
         {
           "id": "e2q5",
           "variants": [
-            "On the ‘Billing’ worksheet, remove duplicate records based on the ‘Company’ field, keeping only the entry with the most recent date."
+            "On the 'Billing' worksheet, remove duplicate records based on the 'Company' field, keeping only the entry with the most recent date."
           ]
         }
       ]
@@ -398,7 +398,7 @@
         {
           "id": "e3q1",
           "variants": [
-            "On the \"Orders\" worksheet, in the \"Discount\" column, modify the conditional formatting rule applied to the largest discounts. Change the font style to Bold and the font color to Olive Green,  Accent 3, Darker 25% (from the Theme Colors palette.) Note: Do not create any new conditional formatting rules or remove any existing rules."
+            "On the \"Orders\" worksheet, in the \"Discount\" column, modify the conditional formatting rule applied to the largest discounts. Change the font style to Bold and the font color to Olive Green, Accent 3, Darker 25% (from the Theme Colors palette.) Note: Do not create any new conditional formatting rules or remove any existing rules."
           ]
         },
         {
@@ -417,6 +417,191 @@
           "id": "e3q4",
           "variants": [
             "On the \"Orders\" worksheet, create a chart that displays the \"Quantity\" for each customer as a Clustered Column and the \"Unit Price\" as a Line with Markers. Plot the \"Unit Price\" on a Secondary Axis. Display the \"Customer ID\" values as the horizontal axis labels. The exact size and position of the chart do not matter."
+          ]
+        }
+      ]
+    }
+  ],
+  "Practice2": [
+    {
+      "id": "p2_analytical",
+      "name": "Analytical Computing",
+      "file": "./projects/CERTIFICACION MO-211/Analytical Computing.xlsx",
+      "questions": [
+        {
+          "id": "p2_c1q1",
+          "variants": [
+            "On the 'Weighting' worksheet, create a scenario named 'More Exams' that changes the value in cell B5 to '5'. Allow changes to be made to the scenario. Then close the Scenario Manager."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_firstup",
+      "name": "First Up Consultants",
+      "file": "./projects/CERTIFICACION MO-211/First_Up_Consultants.xlsx",
+      "questions": [
+        {
+          "id": "p2_c2q1",
+          "variants": [
+            "On the 'Consultants' worksheet, for the 'Birth Month' column, create a custom number format to display only the month in a text format. For example, January."
+          ]
+        },
+        {
+          "id": "p2_c2q2",
+          "variants": [
+            "On the 'Consultants' worksheet, enter a formula in cell J4 that displays a list of names based on the 'Title' displayed in cell J3. Use a formula that will reflect 'Title' changes to J3."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_cruise",
+      "name": "Cruise Bookings",
+      "file": "./projects/CERTIFICACION MO-211/Cruise Bookings.xlsm",
+      "questions": [
+        {
+          "id": "p2_c3q1",
+          "variants": [
+            "On the 'Reservations' worksheet, use an Excel feature to ungroup the table data."
+          ]
+        },
+        {
+          "id": "p2_c3q2",
+          "variants": [
+            "Edit the 'FormatReport' macro so that it applies the table style 'TableStyleLight10' instead of 'TableStyleMedium3'. Note: Macros are disabled for security but still editable through the Visual Basic editor."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_trey",
+      "name": "Trey Research",
+      "file": "./projects/CERTIFICACION MO-211/TreyResearch.xlsx",
+      "questions": [
+        {
+          "id": "p2_c4q1",
+          "variants": [
+            "Require that users enter the password '456' before they can add, delete, move, rename, or hide worksheets in the current workbook."
+          ]
+        },
+        {
+          "id": "p2_c4q2",
+          "variants": [
+            "On the 'Juvenile Fish' worksheet, in the 'Island' column, configure the cells so that an in-cell dropdown list appears when a cell is selected. Use the 'Islands' named range as the source of the list."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_adventure",
+      "name": "Adventure Works Cycles",
+      "file": "./projects/CERTIFICACION MO-211/Adventure Works Cycles.xlsx",
+      "questions": [
+        {
+          "id": "p2_c5q1",
+          "variants": [
+            "Configure Excel to save an AutoRecover version of each open file every '6' minutes."
+          ]
+        },
+        {
+          "id": "p2_c5q2",
+          "variants": [
+            "All the cells on the 'Work Sites' worksheet are unlocked. On the worksheet, lock only cells F4:F10. Ensure that users can select and format cells after protecting the worksheet. Protect the worksheet using the password '123'."
+          ]
+        },
+        {
+          "id": "p2_c5q3",
+          "variants": [
+            "On the 'Sales Projections' worksheet, in cells C8:G8, use the Fill Series feature to project a growth of 12 percent per year for the 'London' office."
+          ]
+        },
+        {
+          "id": "p2_c5q4",
+          "variants": [
+            "Adventure Works Cycles plans to send $10, $20, and $30 gift cards to loyal customers each quarter of the year to celebrate its 50th anniversary. On the 'Loyalty' worksheet, in cell C4, enter a formula that uses the 'RANDARRAY' function to randomly determine the gift card amount each customer will receive for each quarter."
+          ]
+        },
+        {
+          "id": "p2_c5q5",
+          "variants": [
+            "On the 'Orders' worksheet, in cell G3, revise the formula to display the total 'Quantity' of parts that have a 'Due Date' before today. Do not include today's date."
+          ]
+        },
+        {
+          "id": "p2_c5q6",
+          "variants": [
+            "On the 'Locations' worksheet, create a chart that displays the 'Units in Production' at each location as a Clustered Column and the 'Maximum Units' at each location as a Line with Markers. Display the 'Location' cities as the horizontal axis labels."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_bellows",
+      "name": "Bellows College",
+      "file": "./projects/CERTIFICACION MO-211/Bellows College.xlsm",
+      "questions": [
+        {
+          "id": "p2_c6q1",
+          "variants": [
+            "On the 'Results' worksheet, use an Excel feature to group all the table rows that have a value of 'A' in the 'Section' column."
+          ]
+        },
+        {
+          "id": "p2_c6q2",
+          "variants": [
+            "In the 'Report' macro, update the 'PrintTitleRows' and 'PrintGridlines' properties so that the macro automatically prints the rows 1:3 as title rows and does not print the gridlines."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_adatum",
+      "name": "A. Datum Corporation",
+      "file": "./projects/CERTIFICACION MO-211/Datum Corporation.xlsx",
+      "questions": [
+        {
+          "id": "p2_c7q1",
+          "variants": [
+            "Require that users enter the password '123' before they can add, delete, move, rename, or hide worksheets in the current workbook."
+          ]
+        },
+        {
+          "id": "p2_c7q2",
+          "variants": [
+            "On the 'Suppliers' worksheet, in the 'Supplier ID' column, apply a custom number format to automatically display each ID with the '#' symbol followed by five digits. The existing number should be padded with zeroes to create the five digits. For example, '123' will be displayed as '#00123'."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_auction",
+      "name": "Auction",
+      "file": "./projects/CERTIFICACION MO-211/Auction.xlsx",
+      "questions": [
+        {
+          "id": "p2_c8q1",
+          "variants": [
+            "On the 'Customers' worksheet, keep only the latest entry for each customer and remove all other duplicate rows based on the customer 'ID'."
+          ]
+        },
+        {
+          "id": "p2_c8q2",
+          "variants": [
+            "On the 'Pricing' worksheet, use Goal Seek to determine the change in cell D4 that would result in a 'Profit' of '$500' in cell F4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2_wideworld",
+      "name": "Wide World Importers",
+      "file": "./projects/CERTIFICACION MO-211/Wide World Importers.xlsx",
+      "questions": [
+        {
+          "id": "p2_c9q1",
+          "variants": [
+            "On the 'Products' worksheet, in cell D4, enter a formula that will display the data from A4:B80 sorted by the 'Unit Price' in descending order."
           ]
         }
       ]

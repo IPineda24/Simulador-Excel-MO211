@@ -64,14 +64,17 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
   const reviewCount = Object.values(questionStates).filter(v => v === 'review').length
   const isChallenge = mode === 'challenges'
   const isExam = mode === 'exam'
+  const isPractice2 = mode === 'Practice2'
 
-  const modeLabel = isExam ? 'Exam' : isChallenge ? 'Challenges' : 'Practice'
-  const modeColor = isExam ? 'text-[#e05c00]' : isChallenge ? 'text-challenge-accent' : 'text-sim-accent'
+  const modeLabel = isExam ? 'Exam' : isPractice2 ? 'Practice 2' : isChallenge ? 'Challenges' : 'Practice'
+  const modeColor = isExam ? 'text-[#e05c00]' : isPractice2 ? 'text-[#7c3aed]' : isChallenge ? 'text-challenge-accent' : 'text-sim-accent'
   const btnStyle = isExam
     ? 'bg-[#e05c00]/10 border-[#e05c00]/30 text-[#e05c00] hover:bg-[#e05c00]/20'
-    : isChallenge
-      ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
-      : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
+    : isPractice2
+      ? 'bg-[#7c3aed]/10 border-[#7c3aed]/30 text-[#7c3aed] hover:bg-[#7c3aed]/20'
+      : isChallenge
+        ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
+        : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
 
   const handleHome = () => {
     if (window.opener && window.opener !== window) {
@@ -131,7 +134,10 @@ function SimulatorContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const rawMode = searchParams.get('mode')
-  const mode = rawMode === 'challenges' ? 'challenges' : rawMode === 'exam' ? 'exam' : 'practice'
+  const mode = rawMode === 'challenges' ? 'challenges'
+    : rawMode === 'exam' ? 'exam'
+      : rawMode === 'Practice2' ? 'Practice2'
+        : 'practice'
 
   const [session] = useState(() => buildSession(mode))
   const [projectIdx, setProjectIdx] = useState(0)
@@ -147,9 +153,10 @@ function SimulatorContent() {
   const stateKey = `${currentProject.id}-${questionIdx}`
   const isChallenge = mode === 'challenges'
   const isExam = mode === 'exam'
+  const isPractice2 = mode === 'Practice2'
 
   // Accent color based on mode
-  const accentColor = isExam ? '#e05c00' : isChallenge ? 'var(--challenge-accent)' : 'var(--sim-accent)'
+  const accentColor = isExam ? '#e05c00' : isPractice2 ? '#7c3aed' : isChallenge ? 'var(--challenge-accent)' : 'var(--sim-accent)'
 
   // ── Timer ──
   useEffect(() => {
@@ -232,6 +239,11 @@ function SimulatorContent() {
           { isExam && (
             <span className="shrink-0 text-[9px] font-bold font-mono uppercase tracking-widest bg-[#e05c00]/20 border border-[#e05c00]/50 text-[#f08040] rounded px-1.5 py-0.5">
               EXAM
+            </span>
+          ) }
+          { isPractice2 && (
+            <span className="shrink-0 text-[9px] font-bold font-mono uppercase tracking-widest bg-[#7c3aed]/20 border border-[#7c3aed]/50 text-[#a78bfa] rounded px-1.5 py-0.5">
+              PRACTICE 2
             </span>
           ) }
           <h1 className="font-bold text-white tracking-wide truncate" style={ { fontSize: '12px' } }>
