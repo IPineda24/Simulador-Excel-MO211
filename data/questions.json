@@ -616,7 +616,7 @@
         {
           "id": "ep2_q1",
           "variants": [
-            "You are modifying a class gradebook. On the \"Assignments\" worksheet, in the \"Total\" column, create a conditional formatting rule. Use a formula to format the text in Gold, accent 4 font color (from the Standard Colors palette) and Bold Italic font style if the \"Overall\" score is greater than the \"Passing Score\" in cell C29."
+            "You are modifying a class gradebook. On the \"Assignments\" worksheet, in the \"Total\" column, create a conditional formatting rule. Use a formula to format the text in Gold, accent 4 font color and Bold Italic font style if the \"Total\" score is greater than the \"Passing Score\" in cell B29."
           ]
         },
         {
