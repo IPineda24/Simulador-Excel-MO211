@@ -727,7 +727,7 @@
         {
           "id": "ep2_q16",
           "variants": [
-            "On the Loyalty worksheet. To celebrate its 50th anniversary, Adventure Works Cycles will send $3000, $2000, and $3000 gift cards to loyal customers every quarter."
+            "On the Loyalty worksheet. To celebrate its 50th anniversary, Adventure Works Cycles will send $1000, $2000, and $3000 gift cards to loyal customers every quarter. the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions."
           ]
         },
         {
