@@ -606,5 +606,186 @@
         }
       ]
     }
+  ],
+  "exam_project2": [
+    {
+      "id": "ep2_analytical",
+      "name": "Analytical Computing",
+      "file": "./exam project2/Analytical Computing.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q1",
+          "variants": [
+            "You are modifying a class gradebook. On the \"Assignments\" worksheet, in the \"Total\" column, create a conditional formatting rule. Use a formula to format the text in Gold, accent 4 font color (from the Standard Colors palette) and Bold Italic font style if the \"Overall\" score is greater than the \"Passing Score\" in cell C29."
+          ]
+        },
+        {
+          "id": "ep2_q2",
+          "variants": [
+            "On the \"Grades\" worksheet, in the \"Grade\" column, enter a formula that displays a \"Letter Grade\" for each student. Use the \"Grade Conversion\" table to determine the letter grade based on the \"Total\" column in the \"Grades\" table."
+          ]
+        },
+        {
+          "id": "ep2_q3",
+          "variants": [
+            "On the \"Weighting\" worksheet, create a scenario named \"More Exams\" that changes the value in cell B4 to \"15\". Allow changes to be made to the scenario. Then close the Scenario Manager."
+          ]
+        },
+        {
+          "id": "ep2_q4",
+          "variants": [
+            "On the \"Exams\" worksheet, create a chart that displays the \"Maximum\" and \"Minimum\" for each student as a Line with Markers on a secondary axis and the \"Total\" scores as a Clustered Column. Display student \"ID\" numbers as the horizontal axis labels."
+          ]
+        },
+        {
+          "id": "ep2_q5",
+          "variants": [
+            "On the \"Enrollment Analysis\" worksheet, rename the value field as \"Percentage\". Show number format as a percentage."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep2_firstup",
+      "name": "First Up Consultants",
+      "file": "./exam project2/First_Up_Consultants.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q6",
+          "variants": [
+            "You are preparing a report for First Up Consultants. On the \"Consultants\" worksheet, for the \"Birth Month\" column, create a custom number format to display only the day in a text format. For example, Monday."
+          ]
+        },
+        {
+          "id": "ep2_q7",
+          "variants": [
+            "On the \"Consultants\" worksheet, enter a formula in cell J4 that displays a list of names based on the \"Title\" displayed in cell J3. Use a formula that will reflect \"Title\" changes to J3."
+          ]
+        },
+        {
+          "id": "ep2_q8",
+          "variants": [
+            "On the \"Billing\" worksheet, create a Histogram chart that shows the \"Amount Payable\" in bins Underflow bin of \"800\". The chart size and position do not matter."
+          ]
+        },
+        {
+          "id": "ep2_q9",
+          "variants": [
+            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that divide the \"Project Cost\" from the \"Amount Payable\". Display the calculated field for each client."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep2_cruise",
+      "name": "Cruise Bookings",
+      "file": "./exam project2/Cruise Bookings.xlsm",
+      "questions": [
+        {
+          "id": "ep2_q10",
+          "variants": [
+            "You are creating a workbook to track travel reservations for Margie's Travel. On the \"Reservations\" worksheet, use an Excel feature to ungroup the table data."
+          ]
+        },
+        {
+          "id": "ep2_q11",
+          "variants": [
+            "On the \"Reservations\" worksheet, in the \"Excursions\" column, create a conditional formatting rule that displays a Green check when there is a fee. A cell icon should not be displayed when there is not a fee."
+          ]
+        },
+        {
+          "id": "ep2_q12",
+          "variants": [
+            "Edit the \"FormatReport\" macro so that it applies the table style \"TableStyleLight10\" instead of \"TableStyleMedium3\". Note: Macros are disabled for security but still editable through the Visual Basic editor."
+          ]
+        },
+        {
+          "id": "ep2_q13",
+          "variants": [
+            "On the \"Payment Due\" worksheet, in cell A3, insert a PivotTable that displays data from the \"Reservations\" worksheet. In the PivotTable, display a row for each \"Code\" and \"Cruise\". For each \"Code\", display the total \"Balance.\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep2_adventure",
+      "name": "Adventure Works Cycles",
+      "file": "./exam project2/Adventure Works Cycles.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q14",
+          "variants": [
+            "While managing inventory and work orders for Adventure Works Cycles, modify Excel options so an AutoRecover version of each open file is saved every 15 minutes."
+          ]
+        },
+        {
+          "id": "ep2_q15",
+          "variants": [
+            "On the \"Work Sites\" worksheet, lock only cells F4:F10. Protect the worksheet with the password \"123\", allowing users to select and format cells."
+          ]
+        },
+        {
+          "id": "ep2_q16",
+          "variants": [
+            "On the Loyalty worksheet. To celebrate its 50th anniversary, Adventure Works Cycles will send $3000, $2000, and $3000 gift cards to loyal customers every quarter."
+          ]
+        },
+        {
+          "id": "ep2_q17",
+          "variants": [
+            "Use an appropriate function in cell K3 on the \"Inventory\" worksheet to determine the number of entries with Days to Build exceeding 2."
+          ]
+        },
+        {
+          "id": "ep2_q18",
+          "variants": [
+            "Modify the formula in cell G3 on the \"Orders\" worksheet so it returns the total Quantity for records with a Due Date less or equal to today's date."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep2_trey",
+      "name": "Trey Research",
+      "file": "./exam project2/TreyResearch.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q19",
+          "variants": [
+            "Protect the workbook structure using the password \"897\" so users cannot add, delete, move, rename, or hide worksheets while analyzing reef research data from the Hawaiian Islands."
+          ]
+        },
+        {
+          "id": "ep2_q20",
+          "variants": [
+            "On the \"Juvenile Fish\" worksheet, restrict the \"Number\" column so that only whole numbers can be entered."
+          ]
+        },
+        {
+          "id": "ep2_q21",
+          "variants": [
+            "Modify the conditional formatting rule applied to the \"Adult\" column on the \"Fish Survey\" worksheet by applying an Icon Sets style and reversing the icon order."
+          ]
+        },
+        {
+          "id": "ep2_q22",
+          "variants": [
+            "On the \"Fish Survey\" worksheet, in cell D104, calculate the average number of Adult fish for records where the Group Type is \"Pairs\" and \"Predators Nearby\" is \"Yes\". Use a formula that will continue to work as new data is added to the table."
+          ]
+        },
+        {
+          "id": "ep2_q23",
+          "variants": [
+            "Modify the PivotTable on the \"Predators Nearby\" worksheet by adding \"Reef Health\" to the Filters area and configuring it to show only \"5\" data."
+          ]
+        },
+        {
+          "id": "ep2_q24",
+          "variants": [
+            "On the \"Hawaiian Islands\" worksheet, create a Bar of Pie PivotChart that shows the PivotTable data. The exact size and position of the chart do not matter."
+          ]
+        }
+      ]
+    }
   ]
 }

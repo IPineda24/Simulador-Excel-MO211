@@ -56,7 +56,7 @@ export default function HomePage() {
       </div>
 
       {/* Mode Cards */ }
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl animate-slide-up">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl animate-slide-up">
 
         {/* Practice Mode */ }
         <button
@@ -146,6 +146,37 @@ export default function HomePage() {
             )) }
           </div>
           <div className="mt-6 flex items-center gap-2 text-[#e05c00] text-sm font-mono group-hover:gap-3 transition-all">
+            <span>Comenzar</span>
+            <span>→</span>
+          </div>
+        </button>
+
+        {/* Exam 2 Mode */ }
+        <button
+          onClick={ () => handleNavigation('exam_project2') }
+          className="group bg-sim-card border border-sim-border rounded-2xl p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:border-[#c0392b]/40 hover:shadow-[0_0_24px_rgba(192,57,43,0.08)]"
+        >
+          <div className="flex items-start justify-between mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#c0392b]/10 border border-[#c0392b]/20 flex items-center justify-center">
+              <span className="text-2xl">🎓</span>
+            </div>
+            <span className="text-[#c0392b]/60 text-xs font-mono uppercase tracking-widest pt-1">5 Projects</span>
+          </div>
+          <h2 className="font-display text-2xl font-bold text-sim-text mb-2"
+            style={ { fontFamily: 'Syne, sans-serif' } }>
+            Exam 2
+          </h2>
+          <p className="text-sim-muted text-sm leading-relaxed mb-6">
+            Segunda simulación de examen MO-211. Proyectos nuevos con mayor dificultad.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            { ['Analytical', 'First Up', 'Cruise', 'Adventure', 'Trey'].map(tag => (
+              <span key={ tag } className="text-xs bg-[#c0392b]/5 border border-[#c0392b]/15 text-[#c0392b]/70 rounded-full px-3 py-0.5">
+                { tag }
+              </span>
+            )) }
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-[#c0392b] text-sm font-mono group-hover:gap-3 transition-all">
             <span>Comenzar</span>
             <span>→</span>
           </div>
