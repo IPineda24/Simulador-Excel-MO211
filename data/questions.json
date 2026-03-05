@@ -609,6 +609,37 @@
   ],
   "exam_project2": [
     {
+      "id": "ep2_firstup",
+      "name": "First Up Consultants",
+      "file": "./exam project2/First_Up_Consultants.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q6",
+          "variants": [
+            "You are preparing a report for First Up Consultants. On the \"Consultants\" worksheet, for the \"Birth Month\" column, create a custom number format to display only the day in a text format. For example, Mon."
+          ]
+        },
+        {
+          "id": "ep2_q7",
+          "variants": [
+            "On the \"Consultants\" worksheet, enter a formula in cell J4 that displays a list of names based on the \"Title\" displayed in cell J3. Use a formula that will reflect \"Title\" changes to J3."
+          ]
+        },
+        {
+          "id": "ep2_q8",
+          "variants": [
+            "On the \"Billing\" worksheet, create a Histogram chart that shows the \"Amount Payable\" in bins Underflow bin of \"1000\". The chart size and position do not matter."
+          ]
+        },
+        {
+          "id": "ep2_q9",
+          "variants": [
+            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that add the \"Project Cost\" to the \"Amount Payable\". Display the calculated field for each client."
+          ]
+        }
+      ]
+    },
+    {
       "id": "ep2_analytical",
       "name": "Analytical Computing",
       "file": "./exam project2/Analytical Computing.xlsx",
@@ -641,37 +672,6 @@
           "id": "ep2_q5",
           "variants": [
             "On the \"Enrollment Analysis\" worksheet, rename the value field as \"Percentage\". Show number format as a percentage."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ep2_firstup",
-      "name": "First Up Consultants",
-      "file": "./exam project2/First_Up_Consultants.xlsx",
-      "questions": [
-        {
-          "id": "ep2_q6",
-          "variants": [
-            "You are preparing a report for First Up Consultants. On the \"Consultants\" worksheet, for the \"Birth Month\" column, create a custom number format to display only the day in a text format. For example, Mon."
-          ]
-        },
-        {
-          "id": "ep2_q7",
-          "variants": [
-            "On the \"Consultants\" worksheet, enter a formula in cell J4 that displays a list of names based on the \"Title\" displayed in cell J3. Use a formula that will reflect \"Title\" changes to J3."
-          ]
-        },
-        {
-          "id": "ep2_q8",
-          "variants": [
-            "On the \"Billing\" worksheet, create a Histogram chart that shows the \"Amount Payable\" in bins Underflow bin of \"1000\". The chart size and position do not matter."
-          ]
-        },
-        {
-          "id": "ep2_q9",
-          "variants": [
-            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that add the \"Project Cost\" to the \"Amount Payable\". Display the calculated field for each client."
           ]
         }
       ]
