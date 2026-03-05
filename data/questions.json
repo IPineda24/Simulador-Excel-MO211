@@ -628,7 +628,7 @@
         {
           "id": "ep2_q3",
           "variants": [
-            "On the \"Weighting\" worksheet, create a scenario named \"More Exams\" that changes the value in cell B4 to \"15\". Allow changes to be made to the scenario. Then close the Scenario Manager."
+            "On the \"Grades\" worksheet, create a scenario named \"New Score\" that changes the value in cell E4 to \"90\". Allow changes to be made to the scenario. Then close the Scenario Manager."
           ]
         },
         {
@@ -653,7 +653,7 @@
         {
           "id": "ep2_q6",
           "variants": [
-            "You are preparing a report for First Up Consultants. On the \"Consultants\" worksheet, for the \"Birth Month\" column, create a custom number format to display only the day in a text format. For example, Monday."
+            "You are preparing a report for First Up Consultants. On the \"Consultants\" worksheet, for the \"Birth Month\" column, create a custom number format to display only the day in a text format. For example, Mon."
           ]
         },
         {
@@ -665,13 +665,13 @@
         {
           "id": "ep2_q8",
           "variants": [
-            "On the \"Billing\" worksheet, create a Histogram chart that shows the \"Amount Payable\" in bins Underflow bin of \"800\". The chart size and position do not matter."
+            "On the \"Billing\" worksheet, create a Histogram chart that shows the \"Amount Payable\" in bins Underflow bin of \"1000\". The chart size and position do not matter."
           ]
         },
         {
           "id": "ep2_q9",
           "variants": [
-            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that divide the \"Project Cost\" from the \"Amount Payable\". Display the calculated field for each client."
+            "On the \"Billing Analysis\" worksheet, in the PivotTable, create a calculated field named \"Total Profit\" that add the \"Project Cost\" to the \"Amount Payable\". Display the calculated field for each client."
           ]
         }
       ]
@@ -696,7 +696,7 @@
         {
           "id": "ep2_q12",
           "variants": [
-            "Edit the \"FormatReport\" macro so that it applies the table style \"TableStyleLight10\" instead of \"TableStyleMedium3\". Note: Macros are disabled for security but still editable through the Visual Basic editor."
+            "Edit the \"FormatReport\" macro so that it applies the table style \"TableStyleLight10\" instead of \"TableStyleMedium3\". Note: Macros are disabled for security so you must activated to can resolve the question."
           ]
         },
         {
@@ -715,7 +715,7 @@
         {
           "id": "ep2_q14",
           "variants": [
-            "While managing inventory and work orders for Adventure Works Cycles, modify Excel options so an AutoRecover version of each open file is saved every 15 minutes."
+            "While managing inventory and work orders for Adventure Works Cycles, modify Excel options so an AutoRecover version of each open file is saved every 8 minutes."
           ]
         },
         {
@@ -727,7 +727,7 @@
         {
           "id": "ep2_q16",
           "variants": [
-            "On the Loyalty worksheet. To celebrate its 50th anniversary, Adventure Works Cycles will send $1000, $2000, and $3000 gift cards to loyal customers every quarter. the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions."
+            "On the Loyalty worksheet. To celebrate its 50th anniversary, Adventure Works Cycles will send $500, $700, and $900 gift cards to loyal customers every quarter. the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions."
           ]
         },
         {
@@ -758,7 +758,7 @@
         {
           "id": "ep2_q20",
           "variants": [
-            "On the \"Juvenile Fish\" worksheet, restrict the \"Number\" column so that only whole numbers can be entered."
+            "On the \"Juvenile Fish\" worksheet, restrict the \"Number\" column so that only whole numbers can be entered between 8 and 16."
           ]
         },
         {
