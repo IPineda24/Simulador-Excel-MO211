@@ -213,6 +213,37 @@ export default function HomePage() {
           </div>
         </button>
 
+        {/* Exam 3 Mode */ }
+        <button
+          onClick={ () => handleNavigation('exam_project3') }
+          className="group bg-sim-card border border-sim-border rounded-2xl p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:border-[#7b1fa2]/40 hover:shadow-[0_0_24px_rgba(123,31,162,0.10)]"
+        >
+          <div className="flex items-start justify-between mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#7b1fa2]/10 border border-[#7b1fa2]/20 flex items-center justify-center">
+              <span className="text-2xl">🏅</span>
+            </div>
+            <span className="text-[#7b1fa2]/60 text-xs font-mono uppercase tracking-widest pt-1">5 Projects</span>
+          </div>
+          <h2 className="font-display text-2xl font-bold text-sim-text mb-2"
+            style={ { fontFamily: 'Syne, sans-serif' } }>
+            Exam 3
+          </h2>
+          <p className="text-sim-muted text-sm leading-relaxed mb-6">
+            Examen de certificación oficial. Mide tu nivel real sin ayuda — tal como el día del examen.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            { ['Adventure', 'First Up', 'Analytical', 'Cruise', 'Trey'].map(tag => (
+              <span key={ tag } className="text-xs bg-[#7b1fa2]/5 border border-[#7b1fa2]/15 text-[#7b1fa2]/70 rounded-full px-3 py-0.5">
+                { tag }
+              </span>
+            )) }
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-[#7b1fa2] text-sm font-mono group-hover:gap-3 transition-all">
+            <span>Comenzar</span>
+            <span>→</span>
+          </div>
+        </button>
+
       </div>
 
       {/* Footer */ }
