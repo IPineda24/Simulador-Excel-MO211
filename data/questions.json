@@ -968,5 +968,192 @@
         }
       ]
     }
+  ],
+  "exam_project4": [
+    {
+      "id": "ep1_Bellows College",
+      "name": "Bellows College",
+      "file": "./exam project4/Bellows College.xlsm",
+      "questions": [
+        {
+          "id": "ep1_q1",
+          "variants": [
+            "You are preparing for a meeting with school leaders regarding students performance in a class. On the 'Results' worksheet, use an Excel feature to group all the table rows that have a value of 'B' in the 'Section' column"
+          ]
+        },
+        {
+          "id": "ep1_q2",
+          "variants": [
+            "On the 'Results' worksheet, in the 'Exam Results' table, create a conditional formatting rule. use a formula to format the 'Name' column in Green text color(from the Standard Colors palette) if the average of the four exam results is greather or equal to 60"
+          ]
+        },
+        {
+          "id": "ep1_q3",
+          "variants": [
+            "In the 'Report' macro, update the 'PrintGridlines' properties so that the macro automatically prints the rows 1:3 as title rows and does not print the gridlines"
+          ]
+        },
+        {
+          "id": "ep1_q4",
+          "variants": [
+            "On the 'Summary' worksheet, in cell A4, create a PivoTable using the data in the 'Exam Results' table of the 'Results' worksheet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep2_Datum Corporation",
+      "name": "A. Datum Corporation",
+      "file": "./exam project4/Datum Corporation.xlsx",
+      "questions": [
+        {
+          "id": "ep2_q1",
+          "variants": [
+            "You are preparing data for a monthly management meeting. Require that users enter the password '1235' before they can add, delete, move, rename, or hide worksheets in the current workbook"
+          ]
+        },
+        {
+          "id": "ep2_q2",
+          "variants": [
+            "On the 'Suppliers' worksheet, in the 'Supplier ID' column, apply a custom number format to automatically display eache ID with '#' symbol followed by five digits. The existing number should be padded with zeroes to create the five digits. For example, '123' will be desplayed as '#00123'"
+          ]
+        },
+        {
+          "id": "ep2_q3",
+          "variants": [
+            "On the 'Orders' worksheet, in the 'Order Total' column, create a conditional formatting rule that uses the Icon Sets format style to display a Pink Circle when the value is greater than or equal to '1000', a Yellow Cicle when the value is less than 1000 and greater than or equal to '200', and a Grey Cicle when the value is less than 200"
+          ]
+        },
+        {
+          "id": "ep2_q4",
+          "variants": [
+            "On the 'Orders' worksheet, in cell J5, enter a formula to return the single largest 'Order Total' based on the 'Supplier' and the 'Material' displayed in cells J3 and J4"
+          ]
+        },
+        {
+          "id": "ep2_q5",
+          "variants": [
+            "On the 'Purchase Summary' worksheet, configure the PivoTable to display a blank line below the last 'Supplier' in each 'Material' section"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep3_Adventure Works Cycles",
+      "name": "Adventure Works Cycles",
+      "file": "./exam project4/Adventure Works Cycles.xlsx",
+      "questions": [
+        {
+          "id": "ep3_q1",
+          "variants": [
+            "You are tracking inventory and work orders for Adventure Works Cycles. Configure Excel to save an AutoRecover version of each open file every '2' minutes"
+          ]
+        },
+        {
+          "id": "ep3_q2",
+          "variants": [
+            "All the cells on the 'Work Sites' worksheet are unlocked. On the worksheet, lock only cells F4:F10. Ensure that users can select and format cells after protecting the worksheet. Protect the worksheet using the password '123'"
+          ]
+        },
+        {
+          "id": "ep3_q3",
+          "variants": [
+            "On the 'Sales Projections' worksheet, in the cells C8:G8, use the fill series feature to project a growth of 27.5 percent per year for the 'London' office"
+          ]
+        },
+        {
+          "id": "ep3_q4",
+          "variants": [
+            "Adventure Works Cycles plans to send $700,$800, and $900 gift cards to loyal customers each quarter of the year to celebrate its 50th anniversary. On the 'Loyalty' worksheet, in the cell C4, enter a formula that uses the 'RANDARRAY' function to randomly determine the gift card amount each customer will receive for each quarter. Note: You can use arithmetic operations or additional functions as part of the formula"
+          ]
+        },
+        {
+          "id": "ep3_q5",
+          "variants": [
+            "On the 'Orders' worksheet, in cell G3, revise the formula to display the total 'Quantity' of parts that have a 'Due Date' before today. Do not include today's date."
+          ]
+        },
+        {
+          "id": "ep3_q6",
+          "variants": [
+            "On the 'Locations' worksheet, create a chart that displays the 'Units in Production' at each location as a Clustered Column and the 'Maximum Units' at each location as a Line with Markers on the same chart. Display the 'Location' cities as the horizontal axis labels"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep4_Auction",
+      "name": "Auction",
+      "file": "./exam project4/Auction.xlsx",
+      "questions": [
+        {
+          "id": "ep4_q1",
+          "variants": [
+            "You are creating a workbook to track customer information. There are several customers who have multiple entries for their contact information. On the 'Customers' worksheet, keep only the latest entry for each customer and remove all other duplicate rows based on the customer 'ID'"
+          ]
+        },
+        {
+          "id": "ep4_q2",
+          "variants": [
+            "On the 'Pricing' worksheet, use Goal Seek to determine the change in cell D4 that would result in a 'Profit' of '$700' in cell F4"
+          ]
+        },
+        {
+          "id": "ep4_q3",
+          "variants": [
+            "On the 'Auction' worksheet, create a Histogram chart that shows the 'Bid' values in bins with widths of '1000'. Show the Overflow bin for values over '2500'. Format the bin range numbers to display to '0' decimal places. Keep all other default settings."
+          ]
+        },
+        {
+          "id": "ep4_q4",
+          "variants": [
+            "On the 'Auction Analysis' worksheet, modify the PivotTable to group the data in intervals of 5 Days. Accept the default start and end dates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ep5_Wide World Importers",
+      "name": "Wide World Importers",
+      "file": "./exam project4/Wide World Importers.xlsx",
+      "questions": [
+        {
+          "id": "ep5_q1",
+          "variants": [
+            "You are creating a workbook to track order data for Wide World Importers. On the 'Orders' worksheet, in the 'Discount' column, modify the conditional formatting rule applied to the largest discounts. Change the font style to Bold and the font color to Green, Accent 6, Darker 25% (from the Theme Colors palette) Note: Do not create any new conditional formatting rules or remove any existing rules."
+          ]
+        },
+        {
+          "id": "ep5_q2",
+          "variants": [
+            "On the 'Inventory' worksheet, in cell H3, enter a formula that returns the total quantity of 'In Stock' products that are marked 'Yes' in the 'Discountinued' column"
+          ]
+        },
+        {
+          "id": "ep5_q3",
+          "variants": [
+            "On the 'Orders' worksheet, in the 'Region' column, enter a formula that displays the 'Region' of each order's customer by matching the 'Customer ID' value with the 'ID' value on the 'Customers' worksheet"
+          ]
+        },
+        {
+          "id": "ep5_q4",
+          "variants": [
+            "On the 'Products' worksheet, in cell D4, enter a formula that will display the data from A4:B80 sorted by the 'Unit Price' in descending order"
+          ]
+        },
+        {
+          "id": "ep5_q5",
+          "variants": [
+            "On the 'Customer Contacts' worksheet, insert a slicer that allows users to filter the PivotTable data by 'Region'. Use the slicer to display only data from customers in 'Switzerland'."
+          ]
+        },
+        {
+          "id": "ep5_q6",
+          "variants": [
+            "On the 'Order Analysis' worksheet, configure the PivotChart to show only Report Filter Field Buttons."
+          ]
+        }
+      ]
+    }
   ]
 }

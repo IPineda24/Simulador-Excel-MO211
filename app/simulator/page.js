@@ -66,21 +66,24 @@ function SummaryScreen({ session, questionStates, mode, onRestart, onHome }) {
   const isExam = mode === 'exam'
   const isExam2 = mode === 'exam_project2'
   const isExam3 = mode === 'exam_project3'
+  const isExam4 = mode === 'exam_project4'
   const isPractice2 = mode === 'Practice2'
 
-  const modeLabel = isExam3 ? 'Exam 3' : isExam2 ? 'Exam 2' : isExam ? 'Exam' : isPractice2 ? 'Practice 2' : isChallenge ? 'Challenges' : 'Practice'
-  const modeColor = isExam3 ? 'text-[#a855f7]' : (isExam || isExam2) ? 'text-[#c0392b]' : isPractice2 ? 'text-[#7c3aed]' : isChallenge ? 'text-challenge-accent' : 'text-sim-accent'
-  const btnStyle = isExam3
-    ? 'bg-[#7b1fa2]/10 border-[#7b1fa2]/30 text-[#a855f7] hover:bg-[#7b1fa2]/20'
-    : isExam2
-      ? 'bg-[#c0392b]/10 border-[#c0392b]/30 text-[#c0392b] hover:bg-[#c0392b]/20'
-      : isExam
-        ? 'bg-[#e05c00]/10 border-[#e05c00]/30 text-[#e05c00] hover:bg-[#e05c00]/20'
-        : isPractice2
-          ? 'bg-[#7c3aed]/10 border-[#7c3aed]/30 text-[#7c3aed] hover:bg-[#7c3aed]/20'
-          : isChallenge
-            ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
-            : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
+  const modeLabel = isExam4 ? 'Exam 4' : isExam3 ? 'Exam 3' : isExam2 ? 'Exam 2' : isExam ? 'Exam' : isPractice2 ? 'Practice 2' : isChallenge ? 'Challenges' : 'Practice'
+  const modeColor = isExam4 ? 'text-[#22d3ee]' : isExam3 ? 'text-[#a855f7]' : (isExam || isExam2) ? 'text-[#c0392b]' : isPractice2 ? 'text-[#7c3aed]' : isChallenge ? 'text-challenge-accent' : 'text-sim-accent'
+  const btnStyle = isExam4
+    ? 'bg-[#0e7490]/10 border-[#0e7490]/30 text-[#22d3ee] hover:bg-[#0e7490]/20'
+    : isExam3
+      ? 'bg-[#7b1fa2]/10 border-[#7b1fa2]/30 text-[#a855f7] hover:bg-[#7b1fa2]/20'
+      : isExam2
+        ? 'bg-[#c0392b]/10 border-[#c0392b]/30 text-[#c0392b] hover:bg-[#c0392b]/20'
+        : isExam
+          ? 'bg-[#e05c00]/10 border-[#e05c00]/30 text-[#e05c00] hover:bg-[#e05c00]/20'
+          : isPractice2
+            ? 'bg-[#7c3aed]/10 border-[#7c3aed]/30 text-[#7c3aed] hover:bg-[#7c3aed]/20'
+            : isChallenge
+              ? 'bg-challenge-accent/10 border-challenge-accent/30 text-challenge-accent hover:bg-challenge-accent/20'
+              : 'bg-sim-accent/10 border-sim-accent/30 text-sim-accent hover:bg-sim-accent/20'
 
   const handleHome = () => {
     if (window.opener && window.opener !== window) {
@@ -144,8 +147,9 @@ function SimulatorContent() {
     : rawMode === 'exam' ? 'exam'
       : rawMode === 'exam_project2' ? 'exam_project2'
         : rawMode === 'exam_project3' ? 'exam_project3'
-          : rawMode === 'Practice2' ? 'Practice2'
-            : 'practice'
+          : rawMode === 'exam_project4' ? 'exam_project4'
+            : rawMode === 'Practice2' ? 'Practice2'
+              : 'practice'
 
   const [session] = useState(() => buildSession(mode))
   const [projectIdx, setProjectIdx] = useState(0)
@@ -156,9 +160,13 @@ function SimulatorContent() {
 
   // Exam 3 intake popup
   const isExam3 = mode === 'exam_project3'
-  const [intakeDone, setIntakeDone] = useState(!isExam3)
+  const isExam4 = mode === 'exam_project4'
+  const needsIntake = isExam3 || isExam4
+  const [intakeDone, setIntakeDone] = useState(!needsIntake)
   const [studentName, setStudentName] = useState('')
   const [intakeChecked, setIntakeChecked] = useState(false)
+  const [examPassword, setExamPassword] = useState('')
+  const [passwordError, setPasswordError] = useState(false)
 
   const currentProject = session[projectIdx]
   const totalProjects = session.length
@@ -170,7 +178,7 @@ function SimulatorContent() {
   const isExam2 = mode === 'exam_project2'
   const isPractice2 = mode === 'Practice2'
 
-  const accentColor = isExam3 ? '#7b1fa2' : isExam || isExam2 ? '#e05c00' : isPractice2 ? '#7c3aed' : isChallenge ? 'var(--challenge-accent)' : 'var(--sim-accent)'
+  const accentColor = isExam4 ? '#0e7490' : isExam3 ? '#7b1fa2' : isExam || isExam2 ? '#e05c00' : isPractice2 ? '#7c3aed' : isChallenge ? 'var(--challenge-accent)' : 'var(--sim-accent)'
 
   // ── Timer ──
   useEffect(() => {
@@ -212,26 +220,46 @@ function SimulatorContent() {
     )
   }
 
-  // ── Exam 3 intake popup ──
+  // ── Exam 3 / Exam 4 intake popup ──
   if (!intakeDone) {
+    const accentIntake = isExam4 ? '#0e7490' : '#7b1fa2'
+    const accentLight = isExam4 ? '#22d3ee' : '#d8b4fe'
+    const examLabel = isExam4 ? 'Exam 4' : 'Exam 3'
+    const examEmoji = isExam4 ? '🔐' : '🏅'
+
+    const handleStart = () => {
+      if (isExam4 && examPassword !== 'ceca12') {
+        setPasswordError(true)
+        return
+      }
+      setIntakeDone(true)
+    }
+
+    const canStart = studentName.trim() && intakeChecked && (!isExam4 || examPassword.length > 0)
+
     return (
       <div className="min-h-screen flex items-center justify-center px-4 bg-[#0a0e1a]">
-        <div className="w-full max-w-md bg-[#111827] border border-[#7b1fa2]/30 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(123,31,162,0.15)]">
+        <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.4)]"
+          style={ { background: '#111827', border: `1px solid ${accentIntake}44` } }>
 
           {/* Header */ }
-          <div className="bg-[#7b1fa2]/10 border-b border-[#7b1fa2]/20 px-6 py-4 flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#7b1fa2]/20 border border-[#7b1fa2]/40 flex items-center justify-center text-lg">🏅</div>
+          <div className="border-b px-6 py-4 flex items-center gap-3"
+            style={ { background: `${accentIntake}18`, borderColor: `${accentIntake}30` } }>
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
+              style={ { background: `${accentIntake}25`, border: `1px solid ${accentIntake}50` } }>
+              { examEmoji }
+            </div>
             <div>
-              <p className="text-[10px] font-mono uppercase tracking-widest text-[#a855f7]/60">Certiport MO-211</p>
-              <h2 className="text-white font-bold text-sm" style={ { fontFamily: 'Syne, sans-serif' } }>Exam 3 — Simulación Oficial</h2>
+              <p className="text-[10px] font-mono uppercase tracking-widest" style={ { color: `${accentIntake}99` } }>Certiport MO-211</p>
+              <h2 className="text-white font-bold text-sm" style={ { fontFamily: 'Syne, sans-serif' } }>{ examLabel } — Simulación Oficial</h2>
             </div>
           </div>
 
-          <div className="px-6 py-5 space-y-5">
+          <div className="px-6 py-5 space-y-4">
 
             {/* Name input */ }
             <div>
-              <label className="block text-[11px] font-mono uppercase tracking-widest text-[#a855f7]/70 mb-1.5">
+              <label className="block text-[11px] font-mono uppercase tracking-widest mb-1.5" style={ { color: `${accentIntake}bb` } }>
                 Tu nombre completo
               </label>
               <input
@@ -239,15 +267,38 @@ function SimulatorContent() {
                 value={ studentName }
                 onChange={ e => setStudentName(e.target.value) }
                 placeholder="Ej. Juan Pérez"
-                className="w-full bg-[#0d1117] border border-[#7b1fa2]/30 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#a855f7]/60 transition-colors"
+                className="w-full bg-[#0d1117] rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none transition-colors"
+                style={ { border: `1px solid ${accentIntake}40` } }
               />
             </div>
 
+            {/* Password input — Exam 4 only */ }
+            { isExam4 && (
+              <div>
+                <label className="block text-[11px] font-mono uppercase tracking-widest mb-1.5" style={ { color: `${accentIntake}bb` } }>
+                  Contraseña de acceso
+                </label>
+                <input
+                  type="password"
+                  value={ examPassword }
+                  onChange={ e => { setExamPassword(e.target.value); setPasswordError(false) } }
+                  placeholder="••••••••"
+                  className="w-full bg-[#0d1117] rounded-lg px-3 py-2 text-white text-sm placeholder-gray-600 focus:outline-none transition-colors"
+                  style={ { border: `1px solid ${passwordError ? '#f87171' : `${accentIntake}40`}` } }
+                  onKeyDown={ e => e.key === 'Enter' && canStart && handleStart() }
+                />
+                { passwordError && (
+                  <p className="text-red-400 text-[11px] mt-1 font-mono">Contraseña incorrecta. Intenta de nuevo.</p>
+                ) }
+              </div>
+            ) }
+
             {/* Warning box */ }
-            <div className="bg-[#7b1fa2]/8 border border-[#7b1fa2]/25 rounded-xl p-4 space-y-2">
+            <div className="rounded-xl p-4 space-y-2"
+              style={ { background: `${accentIntake}0e`, border: `1px solid ${accentIntake}28` } }>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-base">⚠️</span>
-                <span className="text-[#d8b4fe] font-bold text-xs uppercase tracking-widest font-mono">Aviso importante</span>
+                <span className="font-bold text-xs uppercase tracking-widest font-mono" style={ { color: accentLight } }>Aviso importante</span>
               </div>
               <p className="text-gray-300 text-xs leading-relaxed">
                 Este examen está diseñado para evaluar tu nivel <strong className="text-white">sin ayuda externa</strong>. Su propósito es darte una nota lo más cercana posible a la que obtendrías en el examen de certificación real de Certiport.
@@ -255,7 +306,7 @@ function SimulatorContent() {
               <p className="text-gray-300 text-xs leading-relaxed">
                 Resolver las preguntas con asistencia —compañeros, apuntes, internet o IA— <strong className="text-[#f9a8d4]">invalida completamente el resultado</strong> y solo te perjudica a ti. Esta es <strong className="text-white">tu oportunidad de medirte honestamente</strong>.
               </p>
-              <p className="text-[#a855f7] text-xs leading-relaxed font-medium">
+              <p className="text-xs leading-relaxed font-medium" style={ { color: accentLight } }>
                 Tienes 50 minutos. Trabaja en Excel con los archivos descargados. Buena suerte.
               </p>
             </div>
@@ -264,7 +315,11 @@ function SimulatorContent() {
             <label className="flex items-start gap-3 cursor-pointer group">
               <div
                 onClick={ () => setIntakeChecked(v => !v) }
-                className={ `mt-0.5 w-4 h-4 shrink-0 rounded border-2 flex items-center justify-center transition-all ${intakeChecked ? 'bg-[#7b1fa2] border-[#7b1fa2]' : 'border-gray-600 group-hover:border-[#a855f7]/60'}` }
+                className="mt-0.5 w-4 h-4 shrink-0 rounded flex items-center justify-center transition-all"
+                style={ {
+                  background: intakeChecked ? accentIntake : 'transparent',
+                  border: `2px solid ${intakeChecked ? accentIntake : '#4b5563'}`
+                } }
               >
                 { intakeChecked && <span className="text-white text-[10px] leading-none">✓</span> }
               </div>
@@ -275,9 +330,10 @@ function SimulatorContent() {
 
             {/* CTA */ }
             <button
-              disabled={ !studentName.trim() || !intakeChecked }
-              onClick={ () => setIntakeDone(true) }
-              className="w-full py-2.5 rounded-xl font-bold text-sm transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-[#7b1fa2] hover:bg-[#6a1b9a] text-white border border-[#a855f7]/30"
+              disabled={ !canStart }
+              onClick={ handleStart }
+              className="w-full py-2.5 rounded-xl font-bold text-sm transition-all disabled:opacity-30 disabled:cursor-not-allowed text-white border"
+              style={ { background: accentIntake, borderColor: `${accentLight}50` } }
             >
               Comenzar examen →
             </button>
@@ -338,6 +394,11 @@ function SimulatorContent() {
           { isExam3 && (
             <span className="shrink-0 text-[9px] font-bold font-mono uppercase tracking-widest bg-[#7b1fa2]/20 border border-[#7b1fa2]/50 text-[#d8b4fe] rounded px-1.5 py-0.5">
               EXAM 3
+            </span>
+          ) }
+          { isExam4 && (
+            <span className="shrink-0 text-[9px] font-bold font-mono uppercase tracking-widest bg-[#0e7490]/20 border border-[#0e7490]/50 text-[#22d3ee] rounded px-1.5 py-0.5">
+              EXAM 4
             </span>
           ) }
           { isPractice2 && (
