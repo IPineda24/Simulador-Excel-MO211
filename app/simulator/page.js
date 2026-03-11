@@ -228,7 +228,7 @@ function SimulatorContent() {
     const examEmoji = isExam4 ? '🔐' : '🏅'
 
     const handleStart = () => {
-      if (isExam4 && examPassword !== 'ceca12') {
+      if (isExam4 && examPassword !== 'CSH24') {
         setPasswordError(true)
         return
       }
